@@ -1,8 +1,17 @@
 * {
     border: 2px solid red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contain {
     width: 600px;
     height: 600px;
     display: flex;
@@ -11,3 +20,11 @@
     align-content: space-around;
 }
 
+.pixel {
+    aspect-ratio: 1;
+    width: 145px;
+}
+
+.pixel:hover {
+    background-color: black;
+}
