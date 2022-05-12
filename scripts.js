@@ -1,27 +1,28 @@
 let gridSize = 4;
 drawGrid(gridSize)
+
 function drawGrid(grid) {
     for (i = 1; (i <= (grid ** 2)); i++) {
-        addDiv(i)
+        addDiv(i, grid)
     }
 }
 
-function addDiv(id) {
+function addDiv(id, pixels) {
     const cont = document.getElementById('contain')
     const newDiv = document.createElement("div");
     newDiv.setAttribute("id", id)
     newDiv.setAttribute("class", 'pixel')
+    newDiv.style.width = pixelSize(pixels);
+    newDiv.addEventListener("mouseenter", function( event ) 
+    {   
+        event.target.style.backgroundColor = "white";
+    })
     cont.appendChild(newDiv)
 }
 
 function pixelSize(amount) {
-    
-}
-
-
-// WORKING ON THIS
-function changeColor() {
-    document.addEventListener("mouseover", )
+    let pixelWidth = 700 / amount
+    return pixelWidth + 'px'
 }
 
 function clickGrid() {
